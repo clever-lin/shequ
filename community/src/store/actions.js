@@ -22,5 +22,10 @@ let actions = {
     //     })
     //     .catch(err=>{})
     // }
+    getbanner(){
+        api.getbanner().then(res=>{
+            console.log(res)
+        }).catch(err=>{})
+    }
 }
 export default actions

@@ -5,8 +5,8 @@ let baseUrl = '/api'
 //设置一个接口对象
 let getData={}
 //模板
-getData.login = (data)=>{
-    return  http.get(baseUrl+'/login/cellphone',{
+getData.getbanner = (data)=>{
+    return  http.get(baseUrl+'/banner',{
         params: data 
 })
 }
