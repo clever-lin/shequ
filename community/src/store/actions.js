@@ -22,5 +22,17 @@ let actions = {
     //     })
     //     .catch(err=>{})
     // }
+    getBanner(){
+        api.banner()
+        .then(res=>{
+            let {data:{data},status} = res
+            if(status == 200){
+                this.commit("getBanner",data)
+                console.log(data,"1111")
+            }
+            console.log(res)
+        })
+        .catch()
+    }
 }
 export default actions

@@ -16,18 +16,28 @@
       <li><router-link to="/center">找家教</router-link></li>
       <li><router-link to="/info">找家教</router-link></li>
       <li><router-link to="/collection">找家教</router-link></li>
-      
+      <li v-for="item in getBanner" :key="item.id">
+        <img :src="item.img" alt="">
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
+import url from '../../util/api'
+import {mapGetters} from 'vuex'
 export default {
   data () {
     return {
-      
     }
-  }
+  },
+  mounted(){
+    console.log(this,"1111111111111")
+    this.$store.dispatch("getBanner")
+  },
+  computed: {
+    ...mapGetters(['getClassify','getBanner'])
+  },
 }
 </script>
 

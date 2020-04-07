@@ -10,6 +10,11 @@ getData.login = (data)=>{
         params: data 
 })
 }
+getData.banner = (data)=>{
+    return http.get(baseUrl+'/banner',{
+        params:data
+    })
+}
 
 //暴露出这个接口对象
 export default getData
