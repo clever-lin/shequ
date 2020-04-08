@@ -41,6 +41,24 @@ let actions = {
         })
         .catch(err=>{})
     },
+    //获取家教轮播图
+    getTeacherBanner(){
+        api.getTeacherBanner().then(res=>{
+            if(res.status == 200){
+                this.commit("setTeacherBanner",res.data.data)
+            }
+        })
+        .catch(err=>{})
+    },
+    //获取家教轮播图
+    getteacherTop(){
+        api.getteacherTop().then(res=>{
+            if(res.status == 200){
+                this.commit("setteacherTop",res.data.data)
+            }
+        })
+        .catch(err=>{})
+    },
     getBanner(){
         api.banner()
         .then(res=>{

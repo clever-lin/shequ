@@ -12,6 +12,18 @@ getData.login = (data)=>{
 getData.finduser = (data)=>{
     return http.post(baseUrl + '/findUser',data)
 }
+//家教轮播图接口
+getData.getTeacherBanner = (data)=>{
+    return http.get(baseUrl + '/TeacherBanner',{
+        params:data
+    })
+}
+//家教排行接口
+getData.getteacherTop = (data)=>{
+    return http.get(baseUrl + '/teacherTop ',{
+        params:data
+    })
+}
 getData.banner = (data)=>{
     return http.get(baseUrl+'/banner',{
         params:data
