@@ -25,18 +25,17 @@ let actions = {
     //     .catch(err=>{})
     // }
     Login(state,form){
-        console.log(form.type)
-        let d = {}
-        d.type = form.type
-        d.name = form.name
-        d.pass = form.pass
-        api.login(d).then(res=>{
+        api.login(form).then(res=>{
             if(res.data.code != 0){
                 Toast(res.data.info);
             }
             else{
                 Toast.success(res.data.info);
-                router.push("/home")
+                api.finduser({name:form.name}).then(res=>{
+                    sessionStorage.setItem("user",JSON.stringify(res.data.data[0]))
+                    router.push("/home")
+                })
+                .catch(err=>{})
             }
             console.log(res)
         })

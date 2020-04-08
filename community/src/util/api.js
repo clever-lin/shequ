@@ -8,6 +8,10 @@ let getData={}
 getData.login = (data)=>{
     return  http.post(baseUrl+'/login',data)
 }
+//查找用户信息
+getData.finduser = (data)=>{
+    return http.post(baseUrl + '/findUser',data)
+}
 getData.banner = (data)=>{
     return http.get(baseUrl+'/banner',{
         params:data

@@ -14,7 +14,7 @@
         <span class="iconfont">&#xe6c3;</span>
         <input type="code"
                placeholder="手机验证码" v-model="form.code">
-        <button class="getcode">验证码</button>
+        <div class="getcode">验证码</div>
       </div>
       <div class="pass">
         <span class="iconfont">&#xe619;</span>
@@ -24,7 +24,7 @@
     </div>
     <van-button type="primary"
                 color="#007af5"
-                block>登录</van-button>
+                block>注册</van-button>
   </div>
 </template>
 
