@@ -22,7 +22,7 @@
                 @click="login"
                 block>登录</van-button>
     <span class="forget">忘记密码？</span>
-    <div class="register">注册</div>
+    <div class="register"><span @click="goregister">注册</span></div>
 
     <div class="order">
       <span style="white-space:pre"> </span><span class="line"></span>
@@ -71,6 +71,9 @@ export default {
     },
     login(){
       this.$store.dispatch("Login",this.form)
+    },
+    goregister(){
+      this.$router.push("/register")
     }
   }
 }
