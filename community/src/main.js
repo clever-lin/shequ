@@ -18,7 +18,9 @@ import "./assets/js/remScale.js"
   //引入vant
   import Vant from 'vant';
   import 'vant/lib/index.css';
+  import { Icon } from 'vant';
   Vue.use(Vant);
+  Vue.use(Icon);
   import { Lazyload } from 'vant';
   Vue.use(Lazyload, {
     lazyComponent: true,

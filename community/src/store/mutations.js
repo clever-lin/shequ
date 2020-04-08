@@ -4,8 +4,5 @@ let mutations = {
         state.Classify = Data.data
         state.Classifyname = Data.arr
     },
-    getBanner(state,image){
-        state.imgs = image
-    }
 }
 export default mutations
