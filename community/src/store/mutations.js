@@ -8,6 +8,10 @@ let mutations = {
     setteacherTop(state,data){
         state.teacherTop = data
     },
+    //设置家证轮播图
+    sethousekeepingbanner(state,data){
+        state.housekeepingbanner = data
+    },
     getBanner(state,image){
         state.imgs = image
     }

@@ -59,6 +59,15 @@ let actions = {
         })
         .catch(err=>{})
     },
+    //获取家证轮播图
+    gethousekeepingbanner(){
+        api.gethousekeepingbanner().then(res=>{
+            if(res.status == 200){
+                this.commit("sethousekeepingbanner",res.data.data)
+            }
+        })
+        .catch(err=>{})
+    },
     getBanner(){
         api.banner()
         .then(res=>{

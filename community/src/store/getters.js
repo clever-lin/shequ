@@ -9,6 +9,10 @@ let getters = {
     getteacherTop(){
         return state.teacherTop
     },
+    //获取teacherTop 家教排行榜
+    gethousekeepingbanner(){
+        return state.housekeepingbanner
+    },
     getBanner(){
         return state.imgs
     }

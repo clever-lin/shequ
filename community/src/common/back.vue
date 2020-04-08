@@ -4,13 +4,9 @@
     <van-nav-bar 
                  left-text=""
                  @click-left="onClickLeft"
-                 @click-right="onClickRight"
                  left-arrow>
       <template #title>
         {{name}}
-      </template>
-      <template #right>
-        <span class="iconfont">&#xe639;</span>
       </template>
     </van-nav-bar>
   </div>

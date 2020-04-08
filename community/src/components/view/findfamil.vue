@@ -80,11 +80,7 @@
       </div>
     </div>
     <!-- 中划线分割，家教排行榜 -->
-    <span class="order">
-      <span class="line left"></span>
-      <span style="white-space:pre"> </span><span class="txt">top排行榜</span>
-      <span style="white-space:pre"> </span><span class="line right"></span>
-    </span>
+    <van-divider :style="{color:'#000',borderColor:'#dadada'}">top排行榜</van-divider>
     <!-- 家教排行 -->
     <div class="content">
       <div class="organization" v-for="item in getteacherTop" :key="item.id">

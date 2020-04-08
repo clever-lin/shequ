@@ -24,6 +24,12 @@ getData.getteacherTop = (data)=>{
         params:data
     })
 }
+//家政轮播图接口
+getData.gethousekeepingbanner = (data)=>{
+    return http.get(baseUrl + '/homeBanner',{
+        params:data
+    })
+}
 getData.banner = (data)=>{
     return http.get(baseUrl+'/banner',{
         params:data

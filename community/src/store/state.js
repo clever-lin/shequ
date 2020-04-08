@@ -5,5 +5,6 @@ let state = {
     imgs:[],
     TeacherBanner:null,//家教轮播图
     teacherTop:null,//家教排行
+    housekeepingbanner:null,//家政轮播图
 }
 export default state

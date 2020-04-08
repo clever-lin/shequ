@@ -1,9 +1,6 @@
 <template>
   <div class="register">
-    <van-nav-bar title="注册"
-                 left-text="返回"
-                 left-arrow
-                 @click-left="onClickLeft" />
+    <v-back :name="name"></v-back>
     <div class="form">
       <div class="name">
         <span class="iconfont">&#xe692;</span>
@@ -32,6 +29,7 @@
 export default {
   data () {
     return {
+      name:"注册页",
       form:{
         name:"",
         pass:"" 
