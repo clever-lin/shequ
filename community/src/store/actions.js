@@ -1,4 +1,6 @@
 import api from '../util/api'
+import { Toast } from "vant"
+import router from '../router'
 let actions = {
     // 模板
     // getClassify(){
@@ -22,6 +24,24 @@ let actions = {
     //     })
     //     .catch(err=>{})
     // }
+    Login(state,form){
+        console.log(form.type)
+        let d = {}
+        d.type = form.type
+        d.name = form.name
+        d.pass = form.pass
+        api.login(d).then(res=>{
+            if(res.data.code != 0){
+                Toast(res.data.info);
+            }
+            else{
+                Toast.success(res.data.info);
+                router.push("/home")
+            }
+            console.log(res)
+        })
+        .catch(err=>{})
+    },
     getBanner(){
         api.banner()
         .then(res=>{

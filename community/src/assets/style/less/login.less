@@ -1,0 +1,108 @@
+.login{
+    height: 100vh;
+    background-color: #f0eff5;
+    .van-nav-bar{
+        background-color: #007af5;
+        @{deep}.van-icon{
+            color: #fff;
+        }
+        @{deep}.van-nav-bar__text{
+            color: #fff;
+        }
+        @{deep}.van-nav-bar__title{
+            color: #fff;
+            font-size: 15px;
+        }
+    }
+    .form{
+        margin: 0.4rem auto;
+        margin-bottom: 20px;
+        width: 90%;
+        color: #000;
+        background-color: #fff;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        .name,.pass{
+            display: flex;
+            align-items: center;
+            span{
+                display: block;
+                width: 10%;
+                text-align: center;
+            }
+            input{
+                width: 90%;
+                padding: 5px;
+                border: none;
+                border-radius: 5px;
+                height: 0.6rem;
+            }
+        }
+        .name{
+            border-bottom: 1px solid #ccc;
+        }
+        .pass{
+            span{
+                color: #007af5;
+            }
+        }
+    }
+    .van-button--block{
+        margin:  0 auto;
+        width: 90%;
+        border-radius: 5px;
+    }
+    .forget{
+        margin-right: 5%;
+        margin-top: 0.2rem;
+        display: block;
+        color: #ccc;
+        text-align: right;
+    }
+    .register{
+        margin-top: 0.8rem;
+        text-align: center;
+        color: #000;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .order {
+        height: 0.8rem;
+        line-height: 0.8rem;
+        text-align: center;
+    }
+    .order .line {
+        display: inline-block;
+        width: 35%;
+        border-top: 1px solid #ccc;
+        margin-bottom: 2px;
+    }
+    .order .txt {
+        font-size: 14px;
+        color: #ccc;
+        vertical-align: middle;
+    }
+    .text{
+        text-align: center;
+        color: #99999b;
+    }
+    .way{
+        margin: 0 auto;
+        margin-top: 40px;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        .wx,.wb,.qq{
+            width: 1.2rem;
+            height: 1.2rem;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .icon{
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
