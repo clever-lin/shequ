@@ -71,16 +71,16 @@
       </div>
     </div>
     <!-- 评价信息 -->
-    <div class="content">
+    <div class="content" v-for="item in getRepairComment" :key="item.id">
         <div class="photo">
-          <img src="" alt="">
+          <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2151447830,1807870251&fm=11&gp=0.jpg" alt="">
         </div>
         <div class="info">
             <div class="name_time">
-                <span class="name">asda</span>
-                <span class="time">2012-5-2</span>
+                <span class="name">{{item.name}}</span>
+                <span class="time">{{item.time | toTime}}</span>
             </div>
-            <p></p>
+            <p class="content_info">{{item.content}}</p>
         </div>
     </div>
   </div>
@@ -97,9 +97,10 @@ export default {
   mounted() {
     let id = this.$router.currentRoute.query
     this.$store.dispatch("findHomeWorker", id)
+    this.$store.dispatch("findRepairComment")
   },
   computed: {
-    ...mapGetters(["getHomeWorker"])
+    ...mapGetters(["getHomeWorker","getRepairComment"])
   }
 }
 </script>

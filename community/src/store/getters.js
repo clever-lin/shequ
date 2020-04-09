@@ -23,6 +23,10 @@ let getters = {
     getHomeWorker(){
         return state.HomeWorker
     },
+    //获取setRepairComment 维修评论
+    getRepairComment(){
+        return state.RepairComment
+    },
     getBanner(){
         return state.imgs
     }

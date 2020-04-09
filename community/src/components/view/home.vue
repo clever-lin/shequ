@@ -24,7 +24,7 @@
           <span class="iconfont icon-duoyun skyPic"></span>
           <div class="sky-txt">
             <p>
-              <span>多云/小雨 </span>&nbsp
+              <span>多云/小雨 </span>&nbsp;
               <span> 27 / 30C</span>
             </p>
             <p class="wind">3-4级 / 4-5级风</p>

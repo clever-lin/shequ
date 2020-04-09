@@ -25,6 +25,7 @@ export default {
     text-align: center;
     display: flex;
     line-height: 35px;
+    background-color: #fff;
     .share{
         width: 20%;
         height: 33px;
@@ -32,6 +33,7 @@ export default {
         border: 1px solid #ff6600;
         color:#000;
         margin-right: 10px;
+        background-color: #fff;
     }
     .questions{
         width: 80%;
