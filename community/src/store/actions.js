@@ -25,22 +25,22 @@ let actions = {
     //     .catch(err=>{})
     // }
     Login(state,form){
-        console.log(form.type)
-        let d = {}
-        d.type = form.type
-        d.name = form.name
-        d.pass = form.pass
-        api.login(d).then(res=>{
+        api.login(form).then(res=>{
             if(res.data.code != 0){
                 Toast(res.data.info);
             }
             else{
                 Toast.success(res.data.info);
-                router.push("/home")
+                api.finduser({name:form.name}).then(res=>{
+                    sessionStorage.setItem("user",JSON.stringify(res.data.data[0]))
+                    router.push("/home")
+                })
+                .catch(err=>{})
             }
         })
         .catch(err=>{})
     },
+    //首页的图
     getHomeBanner(){
         api.banner()
         .then(res=>{
@@ -50,6 +50,43 @@ let actions = {
             }
         })
         .catch()
-    }
+    },
+    //获取家教轮播图
+    getTeacherBanner(){
+        api.getTeacherBanner().then(res=>{
+            if(res.status == 200){
+                this.commit("setTeacherBanner",res.data.data)
+            }
+        })
+        .catch(err=>{})
+    },
+    //获取家教轮播图
+    getteacherTop(){
+        api.getteacherTop().then(res=>{
+            if(res.status == 200){
+                this.commit("setteacherTop",res.data.data)
+            }
+        })
+        .catch(err=>{})
+    },
+    //获取家政轮播图
+    gethousekeepingbanner(){
+        api.gethousekeepingbanner().then(res=>{
+            if(res.status == 200){
+                this.commit("sethousekeepingbanner",res.data.data)
+            }
+        })
+        .catch(err=>{})
+    },
+    //获取家政员工信息
+    findHomeWorker(state,id){
+        api.findHomeWorker(id).then(res=>{
+            console.log(res)
+            if(res.status == 200){
+                this.commit("setHomeWorker",res.data.data)
+            }
+        })
+        .catch(err=>{})
+    },
 }
 export default actions

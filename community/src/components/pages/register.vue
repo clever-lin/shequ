@@ -1,9 +1,6 @@
 <template>
   <div class="register">
-    <van-nav-bar title="注册"
-                 left-text="返回"
-                 left-arrow
-                 @click-left="onClickLeft" />
+    <v-back :name="name"></v-back>
     <div class="form">
       <div class="name">
         <span class="iconfont">&#xe692;</span>
@@ -14,7 +11,7 @@
         <span class="iconfont">&#xe6c3;</span>
         <input type="code"
                placeholder="手机验证码" v-model="form.code">
-        <button class="getcode">验证码</button>
+        <div class="getcode">验证码</div>
       </div>
       <div class="pass">
         <span class="iconfont">&#xe619;</span>
@@ -24,7 +21,7 @@
     </div>
     <van-button type="primary"
                 color="#007af5"
-                block>登录</van-button>
+                block>注册</van-button>
   </div>
 </template>
 
@@ -32,6 +29,7 @@
 export default {
   data () {
     return {
+      name:"注册页",
       form:{
         name:"",
         pass:"" 

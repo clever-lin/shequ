@@ -1,0 +1,163 @@
+.findfamil{
+    .top{
+        @{deep}.van-nav-bar{
+            background-color: #007af4;
+            height: 0.88rem;
+            line-height: 0.88rem;
+        }
+        @{deep}.van-icon{
+            color: #fff;
+            font-size: 0.4rem;
+            line-height: 0.88rem;
+        }
+        @{deep}.van-nav-bar__title{
+            color: #fff;
+            font-size: 0.3rem;
+            line-height: 0.88rem;
+        }
+        @{deep}.van-nav-bar__right{
+            display: flex;
+            align-items: center;
+            
+        }
+        span{
+            color: #fff;
+            font-size: 0.4rem;
+            height: 0.88rem;
+        }
+    }
+    .release{
+        background-color: #007af4;
+        color: #fff;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .my-swipe .van-swipe-item {
+        color: #fff;
+        font-size: 20px;
+        line-height: 150px;
+        text-align: center;
+        background-color: #39a9ed;
+    }
+    @{deep}.van-search__content{
+        background-color: #fff;
+        border: 1px solid #dedede;
+        border-radius: 5px;
+    }
+    .banner{
+        img{
+            width: 100%;
+            height: 3.25rem;
+        }
+    }
+    .operation{
+        display: flex;
+        border-bottom: 1px solid #dedede;
+        .teacher{
+            display: flex;
+            align-items: center;
+            flex: 1;
+            padding-left: 0.4rem;
+            padding-right: 0.4rem;
+            margin-top: 0.15rem;
+            margin-bottom: 0.15rem;
+            border-right: 1px solid #dedede;
+        }
+        .quiz{
+            display: flex;
+            align-items: center;
+            flex: 1;
+            padding-left: 0.4rem;
+            padding-right: 0.4rem;
+            margin-top: 0.15rem;
+            margin-bottom: 0.15rem;
+            .iconfont{
+                    color: orange;
+                }
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+            span{
+                color: #c0c0c0;
+            }
+        }
+        .iconfont{
+            font-size:0.6rem;
+            margin-right: 2px;
+            color: #007af4;
+        }
+    }
+    .classify{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin:  0 auto;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        .fl{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .primary,.junior,.senior,.interest{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.05rem;
+            height: 1.05rem;
+            color: #fff;
+            border-radius: 50%;
+            span{
+                font-size: .6rem;
+                margin-top: 0.05rem;
+            }
+        }
+        .primary{
+            background-color: #0ad927;
+        }
+        .junior{
+            background-color: #f8991b;
+        }
+        .senior{
+            background-color: #128deb;
+        }
+        .interest{
+            background-color: #f06687;
+        }
+    }
+    .content{
+        margin: 0 auto;
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .organization{
+            width: 48%;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            img{
+                width: 100%;
+                height: 1.65rem;
+            }
+            .num{
+                position: relative;
+                height: 0.7rem;
+                padding-left: 0.1rem;
+                span{
+                    line-height: 0.7rem;
+                    color: #646464;
+                }
+                .photo{
+                    position: absolute;
+                    right: 10px;
+                    bottom: 10px;
+                    width: 0.75rem;
+                    height: 0.75rem;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}

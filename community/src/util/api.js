@@ -8,6 +8,34 @@ let getData={}
 getData.login = (data)=>{
     return  http.post(baseUrl+'/login',data)
 }
+//查找用户信息
+getData.finduser = (data)=>{
+    return http.post(baseUrl + '/findUser',data)
+}
+//家教轮播图接口
+getData.getTeacherBanner = (data)=>{
+    return http.get(baseUrl + '/TeacherBanner',{
+        params:data
+    })
+}
+//家教排行接口
+getData.getteacherTop = (data)=>{
+    return http.get(baseUrl + '/teacherTop ',{
+        params:data
+    })
+}
+//家政轮播图接口
+getData.gethousekeepingbanner = (data)=>{
+    return http.get(baseUrl + '/homeBanner',{
+        params:data
+    })
+}
+//家政员工信息接口
+getData.findHomeWorker = (data)=>{
+    return http.get(baseUrl + '/findHomeWorker',{
+        params:data
+    })
+}
 getData.banner = (data)=>{
     return http.get(baseUrl+'/banner',{
         params:data
