@@ -9,9 +9,13 @@ let getters = {
     getteacherTop(){
         return state.teacherTop
     },
-    //获取teacherTop 家教排行榜
+    //获取teacherTop 家教轮播图
     gethousekeepingbanner(){
         return state.housekeepingbanner
+    },
+    //获取HomeWorker 家政员工信息
+    getHomeWorker(){
+        return state.HomeWorker
     },
     getBanner(){
         return state.imgs

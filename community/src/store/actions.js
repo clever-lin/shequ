@@ -59,11 +59,21 @@ let actions = {
         })
         .catch(err=>{})
     },
-    //获取家证轮播图
+    //获取家政轮播图
     gethousekeepingbanner(){
         api.gethousekeepingbanner().then(res=>{
             if(res.status == 200){
                 this.commit("sethousekeepingbanner",res.data.data)
+            }
+        })
+        .catch(err=>{})
+    },
+    //获取家政员工信息
+    findHomeWorker(state,id){
+        api.findHomeWorker(id).then(res=>{
+            console.log(res)
+            if(res.status == 200){
+                this.commit("setHomeWorker",res.data.data)
             }
         })
         .catch(err=>{})

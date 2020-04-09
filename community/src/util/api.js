@@ -30,6 +30,12 @@ getData.gethousekeepingbanner = (data)=>{
         params:data
     })
 }
+//家政员工信息接口
+getData.findHomeWorker = (data)=>{
+    return http.get(baseUrl + '/findHomeWorker',{
+        params:data
+    })
+}
 getData.banner = (data)=>{
     return http.get(baseUrl+'/banner',{
         params:data

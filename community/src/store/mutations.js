@@ -8,9 +8,13 @@ let mutations = {
     setteacherTop(state,data){
         state.teacherTop = data
     },
-    //设置家证轮播图
+    //设置家政轮播图
     sethousekeepingbanner(state,data){
         state.housekeepingbanner = data
+    },
+    //设置家政员工信息
+    setHomeWorker(state,data){
+        state.HomeWorker = data
     },
     getBanner(state,image){
         state.imgs = image

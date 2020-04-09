@@ -1,5 +1,5 @@
 <template>
-<!-- 这里更改成你的页面的class名 -->
+  <!-- 这里更改成你的页面的class名 -->
   <div class="housekeeping">
     <V-backCenter :name="name"></V-backCenter>
     <!-- 搜索框 -->
@@ -26,49 +26,50 @@
     </div>
     <!-- 分类 -->
     <div class="classify">
-      <div class="fl">
+      <div class="fl"
+           @click="golist('钟点工')">
         <div class="hourly">
           <span class="iconfont">&#xe62c;</span>
         </div>
         <span class="text">钟点工</span>
       </div>
-      <div class="fl">
+      <div class="fl" @click="golist('保姆')">
         <div class="baby">
           <span class="iconfont">&#xe613;</span>
         </div>
         <span class="text">保姆</span>
       </div>
-      <div class="fl">
+      <div class="fl" @click="golist('月嫂')">
         <div class="maternity">
           <span class="iconfont">&#xe626;</span>
         </div>
         <span class="text">月嫂</span>
       </div>
-      <div class="fl">
+      <div class="fl" @click="golist('专业保洁')">
         <div class="clean">
           <span class="iconfont">&#xe61e;</span>
         </div>
         <span class="text">专业保洁</span>
       </div>
-      <div class="fl">
+      <div class="fl" @click="golist('家电清洗')">
         <div class="rinse">
           <span class="iconfont">&#xe66c;</span>
         </div>
         <span class="text">家电清洗</span>
       </div>
-      <div class="fl">
+      <div class="fl" @click="golist('家居保养')">
         <div class="maintain">
           <span class="iconfont">&#xe61a;</span>
         </div>
         <span class="text">家居保养</span>
       </div>
-      <div class="fl">
+      <div class="fl" @click="golist('新居开荒')">
         <div class="home">
           <span class="iconfont">&#xe66d;</span>
         </div>
         <span class="text">新居开荒</span>
       </div>
-      <div class="fl">
+      <div class="fl" @click="golist('更多')">
         <div class="more">
           <span class="iconfont">&#xe62f;</span>
         </div>
@@ -79,26 +80,28 @@
     <div class="temporary">
       <div class="advertising">
         <div class="text">临时小时工预约点击这里</div>
-        <img src="http://pic.90sjimg.com/design/00/59/20/21/59364f0f3c6b9.png" alt="">
+        <img src="http://pic.90sjimg.com/design/00/59/20/21/59364f0f3c6b9.png"
+             alt="">
       </div>
       <div class="advertising">
         <div class="text">临时小时工预约点击这里</div>
-        <img src="http://pic.90sjimg.com/design/00/59/20/21/59364f0f3c6b9.png" alt="">
+        <img src="http://pic.90sjimg.com/design/00/59/20/21/59364f0f3c6b9.png"
+             alt="">
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import {mapGetters} from 'vuex'
+import { mapGetters } from "vuex"
 export default {
-  data () {
+  data() {
     return {
-        name:"找家政",
-        value:''
+      name: "找家政",
+      value: ""
     }
   },
-  mounted(){
+  mounted() {
     this.$store.dispatch("gethousekeepingbanner")
   },
   methods: {
@@ -111,9 +114,15 @@ export default {
     },
     onCancel() {
       this.$router.push("/release")
+    },
+    golist(type) {
+      this.$router.push({ 
+        path: "/houseList", 
+        query: {type} 
+      })
     }
   },
-  computed:{
+  computed: {
     ...mapGetters(["gethousekeepingbanner"])
   }
 }
