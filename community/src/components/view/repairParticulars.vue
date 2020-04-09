@@ -1,7 +1,7 @@
 <template>
 <!-- 这里更改成你的页面的class名 -->
-  <div class="login">
-    <h1>我是维修详情页</h1>
+  <div class="repairParticulars">
+    
   </div>
 </template>
 
@@ -16,5 +16,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-
+@deep: ~">>>";
+@import "../../assets/style/less/repairParticulars.less";
 </style>
