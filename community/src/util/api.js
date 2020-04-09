@@ -6,9 +6,7 @@ let baseUrl = '/api'
 let getData={}
 //模板
 getData.login = (data)=>{
-    return  http.get(baseUrl+'/login/cellphone',{
-        params: data 
-})
+    return  http.post(baseUrl+'/login',data)
 }
 getData.banner = (data)=>{
     return http.get(baseUrl+'/banner',{

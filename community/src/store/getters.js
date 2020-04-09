@@ -4,6 +4,9 @@ let getters = {
     // getClassify(){
     //     return state.Classify
     // },
+    getHomeBanner(){
+        return state.homeBanner
+    }
     
 }
 export default getters
