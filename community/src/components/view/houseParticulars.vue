@@ -34,7 +34,7 @@
                         size="mini">关注</van-button>
             <van-button type="primary"
                         color="#75bcff"
-                        size="mini">迷你按钮</van-button>
+                        size="mini">向Ta提问</van-button>
           </p>
           <p class="location">
             <span class="attention">
@@ -71,8 +71,9 @@
       </div>
     </div>
     <!-- 评价信息 -->
-    <div class="content" v-for="item in getRepairComment" :key="item.id">
-        <div class="photo">
+    <div class="comment" v-for="item in getRepairComment" :key="item.id">
+        <div class="main" v-if="getRepairComment">
+          <div class="photo">
           <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2151447830,1807870251&fm=11&gp=0.jpg" alt="">
         </div>
         <div class="info">
@@ -82,6 +83,8 @@
             </div>
             <p class="content_info">{{item.content}}</p>
         </div>
+        </div>
+        <div class="none" v-if="!getRepairComment">暂时还有没评论哦~快去评论吧</div>
     </div>
   </div>
   <v-relation></v-relation>

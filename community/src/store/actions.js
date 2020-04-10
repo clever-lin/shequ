@@ -96,5 +96,27 @@ let actions = {
         })
         .catch(err=>{})
     },
+    //获取维修列表
+    findRepair(state,id){
+        api.findRepair(id).then(res=>{
+            if(res.status == 200){
+                let num = res.data.data[0].score
+                res.data.data[0].score = Number(num)
+                this.commit("setRepair",res.data.data)
+            }
+        })
+        .catch(err=>{})
+    },
+    //获取水站列表
+    findWater(state,id){
+        api.findWater(id).then(res=>{
+            if(res.status == 200){
+                let num = res.data.data[0].score
+                res.data.data[0].score = Number(num)
+                this.commit("setWater",res.data.data)
+            }
+        })
+        .catch(err=>{})
+    },
 }
 export default actions

@@ -26,6 +26,7 @@ export default {
     display: flex;
     line-height: 35px;
     background-color: #fff;
+    border-radius: 10px;
     .share{
         width: 20%;
         height: 33px;

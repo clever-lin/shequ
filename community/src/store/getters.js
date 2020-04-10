@@ -27,6 +27,14 @@ let getters = {
     getRepairComment(){
         return state.RepairComment
     },
+    //获取setRepair 维修列表
+    getRepair(){
+        return state.Repair
+    },
+    //获取setWater 水站列表
+    getWater(){
+        return state.Water
+    },
     getBanner(){
         return state.imgs
     }

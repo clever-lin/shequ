@@ -8,5 +8,7 @@ let state = {
     housekeepingbanner:null,//家政轮播图
     HomeWorker:null,//家政员工信息
     RepairComment:null,//维修评论
+    Repair:null,//维修列表
+    Water:null,//水站列表
 }
 export default state

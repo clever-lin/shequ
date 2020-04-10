@@ -15,22 +15,23 @@
     </div>
     <!-- 列表 -->
     <div class="infolist">
-        <div class="info">
-          <div class="info_left">
+        <div class="info" v-for="item in getRepair" :key="item.id">
+          <div class="info_left" @click="golist(item.id)">
             <div class="title">
-              <span class="tit">杨鑫维修中心阿萨</span>
+              <span class="tit">{{item.name}}</span>
+              <van-rate size=14 v-model="item.score" readonly />
             </div>
-            <div class="type">电脑、手机</div>
+            <div class="type">{{item.type}}</div>
             <div class="address">
               <span class="iconfont">&#xe604;</span>
-              <span>背景阿森纳大三暑假</span>
+              <span>{{item.address}}</span>
             </div>
           </div>
           <div class="info_right">
-            <div class="circle">
+            <div class="circle" @click="callPhone(item.tel)">
               <span class="iconfont">&#xe66e;</span>
             </div>
-            <span class="len">200米</span>
+            <span class="len">{{item.len}}</span>
           </div>
         </div>
     </div>
@@ -38,10 +39,12 @@
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
 export default {
   data () {
     return {
       name: "商家列表",
+      value:5,
       value1: 0,
       value2: "a",
       value3: "d",
@@ -61,7 +64,25 @@ export default {
         { text: "销量排序", value: "f" }
       ],
     }
-  }
+  },
+  mounted() {
+    this.$store.dispatch("findRepair")
+  },
+  methods: {
+    // 调用拨号功能
+    callPhone (phoneNumber) {
+        window.location.href = 'tel://' + phoneNumber
+    },
+    golist(id) {
+      this.$router.push({ 
+        path: "/repairParticulars", 
+        query: {id} 
+      })
+    }
+  },
+  computed: {
+    ...mapGetters(["getRepair"])
+  },
 }
 </script>
 
