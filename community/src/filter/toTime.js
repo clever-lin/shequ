@@ -14,6 +14,7 @@ export default (time) => {
         let hour = (date.getHours()+ '').padStart(2, '0')
         var minute=(date.getMinutes()+ '').padStart(2, '0'); //返回日期中的分钟数（0到59）
         var second=(date.getSeconds()+ '').padStart(2, '0'); //返回日期中的秒数（0到59）
-    return `${year}-${month}-${day} ${hour}:${minute}:${second}`
+    return `${year}-${month}-${day} ${hour}:${minute}`
+    // return `${year}-${month}-${day} ${hour}:${minute}:${second}`
 }
 

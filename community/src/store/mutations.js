@@ -16,6 +16,18 @@ let mutations = {
     setHomeWorker(state,data){
         state.HomeWorker = data
     },
+    //设置维修评论
+    setRepairComment(state,data){
+        state.RepairComment = data
+    },
+    //设置维修列表
+    setRepair(state,data){
+        state.Repair = data
+    },
+    //设置水站列表
+    setWater(state,data){
+        state.Water = data
+    },
     getHomeBanner(state,Data){
         state.homeBanner = Data
     }

@@ -81,9 +81,39 @@ let actions = {
     //获取家政员工信息
     findHomeWorker(state,id){
         api.findHomeWorker(id).then(res=>{
-            console.log(res)
             if(res.status == 200){
                 this.commit("setHomeWorker",res.data.data)
+            }
+        })
+        .catch(err=>{})
+    },
+    //获取维修评论接口
+    findRepairComment(){
+        api.findRepairComment().then(res=>{
+            if(res.status == 200){
+                this.commit("setRepairComment",res.data.data)
+            }
+        })
+        .catch(err=>{})
+    },
+    //获取维修列表
+    findRepair(state,id){
+        api.findRepair(id).then(res=>{
+            if(res.status == 200){
+                let num = res.data.data[0].score
+                res.data.data[0].score = Number(num)
+                this.commit("setRepair",res.data.data)
+            }
+        })
+        .catch(err=>{})
+    },
+    //获取水站列表
+    findWater(state,id){
+        api.findWater(id).then(res=>{
+            if(res.status == 200){
+                let num = res.data.data[0].score
+                res.data.data[0].score = Number(num)
+                this.commit("setWater",res.data.data)
             }
         })
         .catch(err=>{})

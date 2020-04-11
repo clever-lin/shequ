@@ -36,6 +36,24 @@ getData.findHomeWorker = (data)=>{
         params:data
     })
 }
+//获取维修评论接口
+getData.findRepairComment = (data)=>{
+    return http.get(baseUrl + '/findRepairComment',{
+        params:data
+    })
+}
+//获取维修列表接口
+getData.findRepair = (data)=>{
+    return http.get(baseUrl + '/findRepair',{
+        params:data
+    })
+}
+//获取水站列表接口
+getData.findWater = (data)=>{
+    return http.get(baseUrl + '/findWater',{
+        params:data
+    })
+}
 getData.banner = (data)=>{
     return http.get(baseUrl+'/banner',{
         params:data

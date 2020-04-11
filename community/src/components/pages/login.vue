@@ -61,7 +61,9 @@ export default {
       }
     }
   },
-  mounted() {},
+  mounted() {
+     this.keyupEnter()
+  },
   methods: {
     onClickLeft() {
       this.$router.push("/home")
@@ -71,7 +73,14 @@ export default {
     },
     goregister() {
       this.$router.push("/register")
-    }
+    },
+    keyupEnter(){
+      document.onkeydown = e =>{
+          if (e.keyCode === 13) {
+              this.login()
+          }
+      }
+    },
   }
 }
 </script>
