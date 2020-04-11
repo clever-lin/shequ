@@ -1,85 +1,122 @@
 .home{
+    .box{
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
+    //主体内容开始
+    .move{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background-color: #fff;
+    }
+    //导航栏开始
     .navBox{
         background-color:rgb(0,122,244);
         overflow: hidden;
         .navBar{
             box-sizing: border-box;
             background-color:rgb(0,122,244);
-            margin-top:.4rem /* 30/75 */;
-            margin-bottom: .13rem /* 10/75 */;
+            margin-top:0.3rem;
+            margin-bottom: 0.1rem;
             color: #fff;    
             border: none;
             @{deep}.van-nav-bar__title{
                 max-height: 100%;
                 color: #fff;
-                font-size: .33rem /* 25/75 */;
+                font-size: 0.35rem;
             }
             @{deep}.van-nav-bar__right{
                 max-height: 100%;
-                font-size: .27rem /* 20/75 */;
+                font-size: 0.25rem;
             }
         }
         @{deep}[class*=van-hairline]::after{
             border: none;
         }
     }
-    
+    //导航栏结束
+
+    //搜索框开始
     .searchBox{
         width: 100%;
-        height: 1.13rem /* 85/75 */;
-        padding:.2rem /* 15/75 */ .13rem /* 10/75 */;
+        height: 0.85rem;
+        padding:0.15rem 0.1rem;
         box-sizing: border-box;
         display: flex;
+        position: relative;
     }
     .search-box{
         width: 75%;
         height: 100%;
-        border: .01rem /* 1/75 */ solid #ccc;
-        border-radius: .09rem /* 7/75 */;
-        margin-right: .13rem /* 10/75 */;
+        border: 0.01rem solid #ccc;
+        border-radius: 0.07rem;
+        margin-right: 0.1rem;
+        text-indent:2em;
+        font-size: 0.27rem;
+        color: #bbb;
     }
     .search-button{
         width: 23.5%;
         height: 93%;
         padding: 0;
-        line-height: .36rem /* 27/75 */;
+        line-height: 0.27rem;
         bottom: -3px;
-        border-radius: .07rem /* 5/75 */;
+        border-radius: 0.05rem;
     }
+    .searchIcon{
+        position: absolute;
+        width: 0.46rem;
+        height: 0.56rem;
+        line-height: 0.56rem;
+        text-align: center;
+        top: 0.15rem;
+        left: 0.15rem;
+        font-size: 0.25rem;
+        color: #bbb;
+    }
+    //搜索框结束
     .home-banner{
         width: 100%;
-        height: 4rem /* 300/75 */;
-        margin-bottom: .03rem /* 2/75 */;
-        img{
-            width: 100%;
-            height: 100%;
-        }
+        height: 3rem;
+        margin-bottom: 0.02rem;
     }
+    .home-banner .son{
+        width: 100%;
+        height: 100%;
+    }
+    //服务列表开始
     .home-content{
         width: 100%;
         background-color:rgb(245,245,245);
         .dayBox{
             box-sizing: border-box;
-            height: 1.33rem /* 100/75 */;
+            height: 1rem;
             display: flex;
-            padding: .27rem /* 20/75 */;
+            padding: 0.2rem;
             padding-bottom: 0;
             justify-content: space-between;
             .sky{
                 height: 100%;
                 display: flex;
                 .skyPic{
-                    font-size: .67rem /* 50/75 */;
+                    font-size: 0.6rem;
                     height: 100%;
-                    line-height: .61rem /* 46/75 */;
+                    line-height: 0.46rem;
                     color:rgb(0,122,244);
+                    position: relative;
+                    top: 0.1rem;
                 }
                 .sky-txt{
-                    padding-left: .27rem /* 20/75 */;
+                    padding-left: 0.2rem;
                     color: rgb(102,102,102);
-                    font-size: .24rem /* 18/75 */;
                     .wind{
-                        font-size: .21rem /* 16/75 */;
+                        font-size: 0.2rem;
                     }
                 }
             }
@@ -89,18 +126,18 @@
         }
         .serveList{
             box-sizing: border-box;
-            height:4.83rem /* 362/75 */;
+            height:3.62rem;
             width: 100%;
             background-color: #fff;
             display: flex;
             flex-wrap: wrap;
-            border-top: .01rem /* 1/75 */ solid #ccc;
-            padding-top: .05rem /* 4/75 */;
+            border-top: 0.01rem solid #ccc;
+            padding-top: 0.04rem;
         }
         .serveList>li{
             height: 50%;
             width: 33.23%;
-            border-width: 0 .01rem /* 1/75 */ .01rem /* 1/75 */ 0;
+            border-width: 0 0.01rem 0.01rem 0;
             border-style: solid;
             border-color: #ccc;
         }
@@ -115,14 +152,101 @@
             box-sizing: border-box;
             width: 100%;
             height: 100%;
-            padding: .27rem /* 20/75 */ .53rem /* 40/75 */ .23rem /* 17/75 */ .53rem /* 40/75 */;
+            padding: 0.2rem 0.4rem 0.17rem 0.4rem;
             text-align: center;
         }
         .serveList>li>a>span{
-            font-size: .8rem /* 60/75 */;
+            display: inline-block;
+            width: 1.04rem;
+            height: 1.04rem;
+            line-height: 1.04rem;
+            text-align: center;
+            font-size: 0.55rem;
+            border-radius: 50%;
+            color: white;
+            margin-bottom: 0.06rem;
         }
-        .serveList>li>a>p{
-            
-        }
+        //服务列表结束
     }
+    // 主体内容结束
+    //菜单栏开始
+    .showBox{
+        width: 3.74rem;
+        height: 100%;
+        background-color: rgb(0,122,244);
+        z-index: 0;
+        .main{
+            width: 100%;
+            height: 2.1rem;
+            box-sizing: border-box;
+            padding-left: 0.44rem;
+            padding-top: 0.8rem;
+            display: flex;
+        }
+        .main .headPortrait{
+            display: inline-block;
+            width: 0.98rem;
+            height: 0.98rem;
+            box-sizing: border-box;
+            border: 0.02rem solid #fff;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .main .headPortrait img{
+            width: 100%;
+            height: 100%;
+        }
+        .main .nickname{
+            height: 0.98rem;
+            width: 1.8rem;
+            line-height: 0.98rem;
+            box-sizing: border-box;
+            color: #fff;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin-left: 0.3rem;
+            font-size: 0.28rem;
+        }
+        .menu-list{
+            padding:0 0.16rem 0 0.34rem;
+            .menu-item{
+                box-sizing: border-box;
+                    width: 3.24rem;
+                    height: 0.56rem;
+                    display: inline-block;
+                    margin: 0.16rem 0 0.16rem 0;
+                    border-radius: 0.5rem;
+                    padding-top: 0.05rem;
+                    padding-left: 0.1rem;
+            }
+            .menu-item:last-child{
+                margin-top: 0.4rem;
+            }
+            .menu-item>span:first-child{
+                box-sizing: border-box;
+                display: inline-block;
+                width: 0.42rem;
+                height: 0.42rem;
+                line-height: 0.42rem;
+                text-align: center;
+                font-size: 0.25rem;
+                font-weight: 500;
+                border: 0.02rem solid #fff;
+                border-radius: 50%;
+                color: #fff;
+            }
+            .active-color{
+                background-color: rgb(30,74,158);
+            }
+            .menu-item-txt{
+                font-size: 0.28rem;
+                color: #fff;
+                margin-left: 0.25rem;
+            }
+        }
+
+    }
+    //菜单栏结束
 }

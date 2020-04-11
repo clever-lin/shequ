@@ -46,7 +46,7 @@ let actions = {
         .then(res=>{
             let {data:{data},status} = res
             if(status == 200){
-                this.commit("getHomeBanner",data[0].img)
+                this.commit("getHomeBanner",data)
             }
         })
         .catch()

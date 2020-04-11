@@ -31,7 +31,6 @@ const Info =()=> import('@/components/view/info')
 const Release =()=> import('@/components/view/release')
 //收藏
 const Collection =()=> import('@/components/view/collection')
-
 export default new Router({
   routes: [
     {

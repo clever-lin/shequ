@@ -19,9 +19,15 @@ import "./assets/js/remScale.js"
   import Vant from 'vant';
   import 'vant/lib/index.css';
   import { Icon } from 'vant';
-  Vue.use(Vant);
-  Vue.use(Icon);
+  import { Popup } from 'vant';
+  import { Swipe, SwipeItem } from 'vant';
   import { Lazyload } from 'vant';
+  Vue.use(Swipe);
+  Vue.use(SwipeItem);
+  Vue.use(Popup);
+  Vue.use(Vant);
+  Vue.use(Icon);import { SwipeCell } from 'vant';
+  Vue.use(SwipeCell);
   Vue.use(Lazyload, {
     lazyComponent: true,
     loading:'../static/img/default.jpg'
