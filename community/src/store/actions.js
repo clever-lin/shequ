@@ -118,5 +118,16 @@ let actions = {
         })
         .catch(err=>{})
     },
+    //退出登录
+    exit(){
+        api.exit().then(res=>{
+            if(res.status == 200){
+                //退出成功删除存储的user信息
+                sessionStorage.removeItem("user")
+                location.reload()
+            }
+        })
+        .catch(err=>{})
+    }
 }
 export default actions
