@@ -54,6 +54,12 @@ getData.findWater = (data)=>{
         params:data
     })
 }
+//退出登录接口
+getData.exit = (data)=>{
+    return http.get(baseUrl + '/exit',{
+        params:data
+    })
+}
 getData.banner = (data)=>{
     return http.get(baseUrl+'/banner',{
         params:data
