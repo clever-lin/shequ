@@ -1,120 +1,132 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import Vue from "vue";
+import Router from "vue-router";
 
-Vue.use(Router)
+Vue.use(Router);
 //引入一级路由
-const Index =()=> import('@/components/index')
-const Login =()=> import('@/components/pages/login')
-const Register =()=> import('@/components/pages/register')
+const Index = () => import("@/components/index");
+const Login = () => import("@/components/pages/login");
+const Register = () => import("@/components/pages/register");
 
 //引入二级路由
-const Home =()=> import('@/components/view/home')
+const Home = () => import("@/components/view/home");
 //找家教   家教列表  家教详情
-const Findfamil =()=> import('@/components/view/findfamil')
-const Familyeducationlist =()=> import('@/components/view/familyeducationlist')
-const Familyparticulars =()=> import('@/components/view/familyparticulars')
+const Findfamil = () => import("@/components/view/findfamil");
+const Familyeducationlist = () =>
+  import("@/components/view/familyeducationlist");
+const Familyparticulars = () => import("@/components/view/familyparticulars");
 // 水站列表  水站详情
-const WaterList =()=> import('@/components/view/waterList')
-const WaterParticulars =()=> import('@/components/view/waterParticulars')
+const WaterList = () => import("@/components/view/waterList");
+const WaterParticulars = () => import("@/components/view/waterParticulars");
 //维修列表  维修详情
-const RepairList =()=> import('@/components/view/repairlist')
-const RepairParticulars =()=> import('@/components/view/repairParticulars')
+const RepairList = () => import("@/components/view/repairlist");
+const RepairParticulars = () => import("@/components/view/repairParticulars");
 //找家政  家政列表 家政详情
-const Housekeeping =()=> import('@/components/view/housekeeping')
-const HouseList =()=> import('@/components/view/houseList')
-const HouseParticulars =()=> import('@/components/view/houseParticulars')
+const Housekeeping = () => import("@/components/view/housekeeping");
+const HouseList = () => import("@/components/view/houseList");
+const HouseParticulars = () => import("@/components/view/houseParticulars");
 //个人中心
-const Center =()=> import('@/components/view/center')
+const Center = () => import("@/components/view/center");
 //消息
-const Info =()=> import('@/components/view/info')
+const Info = () => import("@/components/view/info");
 //发布
-const Release =()=> import('@/components/view/release')
+const Release = () => import("@/components/view/release");
 //收藏
-const Collection =()=> import('@/components/view/collection')
+const Collection = () => import("@/components/view/collection");
+//社区活动
+const Activity = () => import("../components/view/communityactivity.vue");
+//城市列表
+const City = () => import("../components/view/selectcity.vue");
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: "/",
       component: Index,
-      children:[
+      children: [
         {
-          path: '/home',
+          path: "/home",
           component: Home
         },
         {
-          path: '/findfamil',
+          path: "/findfamil",
           component: Findfamil
         },
         {
-          path: '/familyeducationlist',
+          path: "/familyeducationlist",
           component: Familyeducationlist
         },
         {
-          path: '/familyparticulars',
+          path: "/familyparticulars",
           component: Familyparticulars
         },
         {
-          path: '/waterList',
+          path: "/waterList",
           component: WaterList
         },
         {
-          path: '/waterParticulars',
+          path: "/waterParticulars",
           component: WaterParticulars
         },
         {
-          path: '/repairlist',
+          path: "/repairlist",
           component: RepairList
         },
         {
-          path: '/repairParticulars',
+          path: "/repairParticulars",
           component: RepairParticulars
         },
         {
-          path: '/housekeeping',
+          path: "/housekeeping",
           component: Housekeeping
         },
         {
-          path: '/houseList',
+          path: "/houseList",
           component: HouseList
         },
         {
-          path: '/houseParticulars',
+          path: "/houseParticulars",
           component: HouseParticulars
         },
         {
-          path: '/center',
+          path: "/center",
           component: Center
         },
         {
-          path: '/info',
+          path: "/info",
           component: Info
         },
         {
-          path: '/release',
+          path: "/release",
           component: Release
         },
         {
-          path: '/collection',
+          path: "/collection",
           component: Collection
         },
         {
-          path: '',
-          redirect: "/home"
+          path: "/activity",
+          component: Activity
         },
+        {
+          path: "/city",
+          component: City
+        },
+        {
+          path: "",
+          redirect: "/home"
+        }
       ]
     },
     {
-      path: '/login',
+      path: "/login",
       component: Login
     },
     {
-      path: '/register',
+      path: "/register",
       component: Register
     },
     {
-      path: '*',
+      path: "*",
       redirect: "/"
-    },
-
+    }
   ]
-})
+});

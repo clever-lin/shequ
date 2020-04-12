@@ -9,10 +9,10 @@
         <div class="infoTitle">我的收藏</div>
       </template>
       <template #right>
-        <van-icon name="search" size="0.4rem" color="#ffffff" />
+        <van-icon name="contact" size="0.4rem" color="#ffffff" />
       </template>
     </van-nav-bar>
-    <div class="collection-box" v-for="item in collectionList" :key="item.id">
+    <div class="collection-box" v-for="(item,index) in collectionList" :key="item.id">
       <div class="collection-box-rigth">
         <div class="collection-box-right-title">{{item.title}}</div>
         <div class="collection-box-right-con">{{item.con}}</div>
@@ -21,7 +21,7 @@
           {{item.adress}}
         </div>
       </div>
-      <div class="collection-box-left">
+      <div class="collection-box-left" @click="del(index)">
         <span class="iconfont icon-yichu quxiao"></span>
         <span>取消收藏</span>
       </div>
@@ -36,19 +36,19 @@ export default {
       collectionList: [
         {
           id: 1,
-          title: "百家手机维修中心",
+          title: "百家手机维修中心1",
           con: "手机，电视，电脑维修，数据恢复",
           adress: "石门山古城地铁北星座大厦201"
         },
         {
           id: 1,
-          title: "百家手机维修中心",
+          title: "百家手机维修中心2",
           con: "手机，电视，电脑维修，数据恢复",
           adress: "石门山古城地铁北星座大厦201"
         },
         {
           id: 1,
-          title: "百家手机维修中心",
+          title: "百家手机维修中心3",
           con: "手机，电视，电脑维修，数据恢复",
           adress: "石门山古城地铁北星座大厦201"
         }
@@ -61,7 +61,11 @@ export default {
       this.$router.go(-1);
     },
     //点击跳转到搜索页面
-    onClickRight() {}
+    onClickRight() {},
+    //取消收藏事件
+    del(i) {
+      this.collectionList.splice(i, 1);
+    }
   }
 };
 </script>

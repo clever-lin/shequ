@@ -9,7 +9,7 @@
         <div class="infoTitle">消息</div>
       </template>
       <template #right>
-        <van-icon name="search" size="0.4rem" color="#ffffff" />
+        <van-icon name="contact" size="0.4rem" color="#ffffff" />
       </template>
     </van-nav-bar>
     <van-tabs v-model="active" line-width="0" line-height="0" title-active-color="#007af5">
@@ -29,7 +29,21 @@
         </div>
       </van-tab>
 
-      <van-tab title="未读"></van-tab>
+      <van-tab title="未读">
+        <div class="message-box" v-for="item in messageList" :key="item.id">
+          <div class="message-icon-bg">
+            <van-icon name="orders-o" color="#fff" size="1rem" class="message-icon-center" />
+            <!-- <div class="red-circle">{{item.num}}</div> -->
+          </div>
+          <div class="message-rigth">
+            <div class="message-right-top">
+              <span class="message-right-top-title">{{item.title}}</span>
+              <span class="message-right-top-time">{{item.time}}</span>
+            </div>
+            <div class="message-con">{{item.con}}</div>
+          </div>
+        </div>
+      </van-tab>
     </van-tabs>
   </div>
 </template>
@@ -39,7 +53,27 @@ export default {
   data() {
     return {
       active: 0,
+      //全部消息列表
       messageList: [
+        {
+          id: 1,
+          num: 5,
+          title: "通知消息",
+          time: "08:53",
+          con:
+            "龙山社区为庆祝国庆将举行大型社区活动，欢迎各个业主积极报名参加。。。"
+        },
+        {
+          id: 2,
+          num: 2,
+          title: "通知消息",
+          time: "09:53",
+          con:
+            "龙山社区为庆祝国庆将举行大型社区活动，欢迎各个业主积极报名参加。。。"
+        }
+      ],
+      //未读消息列表
+      noreadeList: [
         {
           id: 1,
           num: 5,

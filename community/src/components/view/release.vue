@@ -15,7 +15,7 @@
     <van-field v-model="infoList.title" label="标题" label-width="1rem" class="input-comm" />
     <van-field v-model="infoList.tag" label="标签" label-width="1rem" class="input-comm" />
     <van-field v-model="infoList.price" label="价格" label-width="1rem" class="input-comm" />
-    <van-field v-model="infoList.phone" label="联系方式" label-width="1rem" class="input-comm" />
+    <van-field v-model="infoList.phone" label="联系方式" label-width="1.1rem" class="input-comm" />
     <van-field
       v-model="infoList.con"
       label="描述"
